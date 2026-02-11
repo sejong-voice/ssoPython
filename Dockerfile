@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     update-ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
+# 비루트 사용자 생성
+RUN addgroup --system app && adduser --system --ingroup app --home /app app
+
 WORKDIR /app
 
 # 의존성만 설치 (패키징 안 함)
@@ -19,6 +22,9 @@ RUN pip install --upgrade pip && \
 
 # 앱 코드
 COPY app ./app
+RUN chown -R app:app /app
+
+USER app
 
 EXPOSE 8081
 
