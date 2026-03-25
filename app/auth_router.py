@@ -2,16 +2,6 @@
 # app/auth_router.py
 # ==========================================
 
-# --- macOS 환경의 TLS 핸드셰이크 문제 회피 코드 ---
-# (macOS에서는 urllib3가 기본 SSL 대신 SecureTransport를 써야 오류가 안 나는 경우가 있음)
-try:
-    import urllib3.contrib.securetransport as st  # type: ignore
-    st.inject_into_urllib3()
-except Exception:
-    # 리눅스/도커 환경에선 필요 없음
-    pass
-
-
 # --- 기본 모듈 및 타입 정의 ---
 import os
 from typing import Dict, Any, Optional, List

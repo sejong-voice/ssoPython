@@ -23,11 +23,14 @@ ENV_LOADED = _load_env()
 DEFAULT_PORT = int(os.getenv("PORT", "8081"))
 APP_VERSION = "1.0.0"
 
+
 from fastapi import FastAPI
 from app.auth_router import router as auth_router
+from DetailDepartment.portal_profile_router import router as portal_profile_router
 
 app = FastAPI(title="Sejong Auth Service", version=APP_VERSION)
 app.include_router(auth_router)
+app.include_router(portal_profile_router)
 
 @app.get("/healthz")
 def health():
