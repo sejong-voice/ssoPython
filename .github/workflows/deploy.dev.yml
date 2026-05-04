@@ -47,7 +47,7 @@ jobs:
           script: |
             cd ~/sejong_voice/docker
             cat > .env <<EOF
-            COMPOSE_PROJECT_NAME=sejong-voice
+            COMPOSE_PROJECT_NAME=sejong-voice-sso
             DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
             EOF
             
