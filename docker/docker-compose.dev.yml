@@ -1,3 +1,5 @@
+name: sejong-voice
+
 services:
   sso:
     image: ${DOCKERHUB_USERNAME}/sejong-voice-sso:dev
