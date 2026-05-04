@@ -58,6 +58,7 @@ jobs:
             mkdir -p ~/sejong-voice-sso/docker
             cd ~/sejong-voice-sso
             cat > .env <<EOF
+            COMPOSE_PROJECT_NAME=sejong-voice
             DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}
             EOF
             
