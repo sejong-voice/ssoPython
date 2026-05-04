@@ -22,6 +22,7 @@ RUN pip install --upgrade pip && \
 
 # 앱 코드
 COPY app ./app
+COPY DetailDepartment ./DetailDepartment
 RUN chown -R app:app /app
 
 USER app
