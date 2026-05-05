@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+python-dotenv>=1.0
+requests==2.31.0
+urllib3==1.26.18
+certifi
+sejong-univ-auth>=0.3.4
+beautifulsoup4>=4.12

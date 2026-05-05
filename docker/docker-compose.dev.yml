@@ -1,0 +1,8 @@
+name: sejong-voice
+
+services:
+  sso:
+    image: ${DOCKERHUB_USERNAME}/sejong-voice-sso:dev
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
