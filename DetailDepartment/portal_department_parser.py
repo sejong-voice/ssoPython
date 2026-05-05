@@ -184,7 +184,7 @@ def main() -> None:
     
     result = {
         "studentNo": my_info.student_id or student_id,
-        "passward": password,
+#        "passward": password,
         "name": my_info.name,
         "DetailDepartment": my_info.major  or my_info.affiliation_raw,
     }

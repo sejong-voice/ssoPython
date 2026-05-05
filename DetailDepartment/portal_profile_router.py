@@ -55,7 +55,7 @@ async def get_detail_department(req: PortalProfileRequest):
         "id": f"u_{sid}",
         "student_id": sid ,
         "role": "student",
-        "password": req.password,
+#        "password": req.password,
         "name": info.name,
         "major":  detail_department,         #전공 반환값을 수정하고 싶으면 해당 부분을 조율해주면 됨
     }

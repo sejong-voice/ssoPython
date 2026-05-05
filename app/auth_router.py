@@ -183,7 +183,7 @@ async def create_session(req: LoginRequest):
         "id": user_id,
         "student_id": req.student_id,
         "role": "student",
-        "password" : req.password,# 임시로 비밀번호 같이 넘기기
+   #     "password" : req.password,# 임시로 비밀번호 같이 넘기기
     }
     if name:
         resp_user["name"] = name
